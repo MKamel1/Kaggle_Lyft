@@ -2,7 +2,8 @@
 
 # Objectives
 Autonomous vehicles (AVs) are expected to dramatically redefine the future of transportation. However, there are still significant engineering challenges to be solved before one can fully realize the benefits of self-driving cars. One such challenge is building models that reliably predict the movement of traffic agents around the AV, such as cars, cyclists, and pedestrians. The ridesharing company Lyft released a challenge to predict the motion of traffic agents (e.g. pedestrians, vehicles, bikes, etc.). In this competition, you'll have access to the largest Prediction Dataset ever released to train and test your models.
-The goal of this shared code is to predict the trajectories of traffic agents. Amulti-modal ones generating three hypotheses (mode of transportation).
+The goal of this shared code is to predict the trajectories of traffic agents. Amulti-modal ones generating three hypotheses (mode of transportation). 
+_We are predicting the motion of the objects in a given scene._
 # Data (Input)
 The Lyft Motion Prediction for Autonomous Vehicles competition is fairly unique, data-wise. In it, a very large amount of data is provided, which can be used in many different ways. Reading the data is also complex.
 The data is packaged in .zarr files. These are loaded using the zarr Python module, and are also loaded natively by l5kit. Each .zarr file contains a set of:
