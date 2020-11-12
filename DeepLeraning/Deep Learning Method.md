@@ -12,13 +12,21 @@ The data is packaged in .zarr files. These are loaded using the zarr Python modu
 * agents: a generic entity captured by the vehicle's sensors. Note that only 4 of the 17 possible agent label_probabilities are present in this dataset.
 * agents_mask: a mask that (for train and validation) masks out objects that aren't useful for training. In test, the mask (provided in files as mask.npz) masks out any test object for which predictions are NOT required.
 traffic_light_faces: traffic light information.
-
+For detailed information on data format and how to deal with it https://github.com/lyft/l5kit/blob/master/data_format.md
 For detailed license information plese refer to https://self-driving.lyft.com/level5/prediction/
-For further information of nthe data collection please refer to https://arxiv.org/pdf/2006.14480.pdf
+For further information of the data collection please refer to https://arxiv.org/pdf/2006.14480.pdf
 
 # Method
-We pre-process the data by conducting down-sampling, normalization, semantic map imputation and data augmentation to allow for fast experimentation and improved results. We also augment the dataset using segmentation masks derived from a pre-trained model. The different modalities and pre-processed data are fed into two types of models, one of which uses the images and semantic map information and pre-trained ResNets, and another of which takes as input the images as well as segmentation masks, using a combination of pre-trained and fully-trained networks.
 ## Model Archeticture
+Now to the fun part! 
+The objective of this project is quite intersting as it is combinig between two tasks 1) training the model to learn from images/frames 2)
+and training the model to understand the temoral correlation between sequence of frames (scene). 
+##### Branch(1)
+So I decided to start the model archeticture by a pretrained model namely ResNet18 ar branch (1). This will help the model to have a good inititalization. Hopefully by the end of this step the model starts to understand what is going on each frame (notice that the model did not yet relate between different frames).
+
+
+We also augment the dataset using segmentation masks derived from a pre-trained model. The different modalities and pre-processed data are fed into two types of models, one of which uses the images and semantic map information and pre-trained ResNets, and another of which takes as input the images as well as segmentation masks, using a combination of pre-trained and fully-trained networks.
+
 ## Optimizer
 ## Input shape
 ## Loss function
