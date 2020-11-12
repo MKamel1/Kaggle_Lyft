@@ -45,4 +45,4 @@ For further informatyion on the used loss funcation please refer to https://gith
 # Next step
 
 # Limitations
-History length, raster size
+History length, raster size, validation Vs. Training (overfitting?)
