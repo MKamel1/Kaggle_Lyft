@@ -13,8 +13,11 @@ The data is packaged in .zarr files. These are loaded using the zarr Python modu
 * agents_mask: a mask that (for train and validation) masks out objects that aren't useful for training. In test, the mask (provided in files as mask.npz) masks out any test object for which predictions are NOT required.
 traffic_light_faces: traffic light information.
 
+For detailed license information plese refer to https://self-driving.lyft.com/level5/prediction/
+For further information of nthe data collection please refer to https://arxiv.org/pdf/2006.14480.pdf
 
 # Method
+We pre-process the data by conducting down-sampling, normalization, semantic map imputation and data augmentation to allow for fast experimentation and improved results. We also augment the dataset using segmentation masks derived from a pre-trained model. The different modalities and pre-processed data are fed into two types of models, one of which uses the images and semantic map information and pre-trained ResNets, and another of which takes as input the images as well as segmentation masks, using a combination of pre-trained and fully-trained networks.
 ## Model Archeticture
 ## Optimizer
 ## Input shape
