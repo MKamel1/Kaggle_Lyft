@@ -15,8 +15,16 @@ The goal of this shared code is to predict the trajectories of traffic agents. A
 ## Input shape
 ## Loss function
 We calculate the negative log-likelihood of the ground truth data given the multi-modal predictions. Let us take a closer look at this. Assume, ground truth positions of a sample trajectory are
+
 ![Eq1](https://github.com/MKamel1/Kaggle_Lyft/blob/master/DeepLeraning/images/eq1.PNG)
 
+In addition, we predict confidences c of these K hypotheses. We assume the ground truth positions to be modeled by a mixture of multi-dimensional independent Normal distributions over time, yielding the likelihood
+
+![Eq2](https://github.com/MKamel1/Kaggle_Lyft/blob/master/DeepLeraning/images/eq2.PNG)
+
+which results in the loss
+
+![Eq3](https://github.com/MKamel1/Kaggle_Lyft/blob/master/DeepLeraning/images/eq3.PNG)
 
 For further informatyion on the used loss funcation please refer to https://github.com/lyft/l5kit/blob/master/competition.md
 # Suggestions / Next Steps
