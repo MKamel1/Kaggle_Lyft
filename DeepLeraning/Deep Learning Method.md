@@ -6,10 +6,10 @@ The goal of this shared code is to predict the trajectories of traffic agents. A
 # Data (Input)
 The Lyft Motion Prediction for Autonomous Vehicles competition is fairly unique, data-wise. In it, a very large amount of data is provided, which can be used in many different ways. Reading the data is also complex.
 The data is packaged in .zarr files. These are loaded using the zarr Python module, and are also loaded natively by l5kit. Each .zarr file contains a set of:
-*scenes: driving episodes acquired from a given vehicle.
-*frames: snapshots in time of the pose of the vehicle.
-*agents: a generic entity captured by the vehicle's sensors. Note that only 4 of the 17 possible agent label_probabilities are present in this dataset.
-*agents_mask: a mask that (for train and validation) masks out objects that aren't useful for training. In test, the mask (provided in files as mask.npz) masks out any test object for which predictions are NOT required.
+* scenes: driving episodes acquired from a given vehicle.
+* frames: snapshots in time of the pose of the vehicle.
+* agents: a generic entity captured by the vehicle's sensors. Note that only 4 of the 17 possible agent label_probabilities are present in this dataset.
+* agents_mask: a mask that (for train and validation) masks out objects that aren't useful for training. In test, the mask (provided in files as mask.npz) masks out any test object for which predictions are NOT required.
 traffic_light_faces: traffic light information.
 
 
