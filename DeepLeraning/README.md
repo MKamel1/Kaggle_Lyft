@@ -10,9 +10,13 @@ The data is packaged in .zarr files. These are loaded using the zarr Python modu
 * agents: a generic entity captured by the vehicle's sensors. Note that only 4 of the 17 possible agent label_probabilities are present in this dataset.
 * agents_mask: a mask that (for train and validation) masks out objects that aren't useful for training. In the test, the mask (provided in files as a mask.npz) masks out any test object for which predictions are NOT required.
 traffic_light_faces: traffic light information.
+
 For detailed information on data format and how to deal with it https://github.com/lyft/l5kit/blob/master/data_format.md
+
 For detailed license information please refer to https://self-driving.lyft.com/level5/prediction/
+
 For further information on the data collection please refer to https://arxiv.org/pdf/2006.14480.pdf
+
 # Method
 ## Model Architecture
 Now to the fun part! 
