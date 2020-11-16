@@ -10,3 +10,5 @@ All issues and pull requests are welcomed
 
 MIT license
 
+# Please refer to the Deep Learning folder for the deep learning models developed
+
