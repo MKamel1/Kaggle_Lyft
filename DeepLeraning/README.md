@@ -18,7 +18,7 @@ For further information of the data collection please refer to https://arxiv.org
 Now to the fun part! 
 The objective of this project is quite intersting as it is combinig between two tasks 1) training the model to learn from images/frames 2)
 and training the model to understand the temoral correlation between sequence of frames (scene). The below figure summarize the model 1's network archeticure.
-![Model](https://github.com/MKamel1/Kaggle_Lyft/blob/master/DeepLeraning/images/Model.PNG)
+![Model101](https://github.com/MKamel1/Kaggle_Lyft/blob/master/DeepLeraning/images/Model111.PNG)
 * Branch(1)
 So I decided to start the model by a pretrained model namely ResNet18 at branch (1). This will help the model to have a good inititalization. Hopefully by the end of this step the model starts to understand what is going on each frame (notice that the model did not yet relate between different frames). The output from ResNet model is fed into a long short-term memory (LSTM). This should help the model to account for the temporal correlation in the data (e.g. how previous frames affect future frames).
 * Branch(2)
